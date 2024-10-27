@@ -5,7 +5,7 @@ import Whatsapp from './Components/Whatsapp';
 
 // Lazy load the components
 const Home = lazy(() => import('./Pages/Home'));
-const AboutUs = lazy(() => import('./Pages/AboutUs'));
+const AboutUs = lazy(() => import('./Pages/Aboutus'));
 const Contactus = lazy(() => import('./Pages/Contactus'));
 const Programs = lazy(() => import('./Pages/Programs'));
 const Videos = lazy(() => import('./Pages/Videos'));

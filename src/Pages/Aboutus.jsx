@@ -81,8 +81,6 @@ const AboutUs = () => {
           </div>
         </section>
 
-
-
         {/* Main Content Section */}
         <section className="section gb nopadtop" style={{ padding: '60px 0' }}>
           <div className="container">
