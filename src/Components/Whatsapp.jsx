@@ -89,9 +89,9 @@ const Wrapper = styled.section`
   }
 
   .whatsAppButton {
-    font-size: 4rem; /* Adjust as needed */
-    width: 4.5rem; /* Size of WhatsApp button */
-    height: 4.5rem; /* Size of WhatsApp button */
+    font-size: 5rem; /* Adjust as needed */
+    width: 5.5rem; /* Size of WhatsApp button */
+    height: 5.5rem; /* Size of WhatsApp button */
     color: #fff;
     background-color: #25d366; /* WhatsApp green color */
     border-radius: 50%;
@@ -106,8 +106,8 @@ const Wrapper = styled.section`
     text-decoration: none; /* Removes underline from link */
 
     .whatsAppIcon {
-      width: 1.5rem; /* Adjust size of the image inside the button */
-      height: 1.5rem; /* Adjust size of the image inside the button */
+      width: 3.0rem; /* Adjust size of the image inside the button */
+      height: 3.0rem; /* Adjust size of the image inside the button */
     }
   }
 `;

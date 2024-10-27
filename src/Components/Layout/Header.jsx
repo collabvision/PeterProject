@@ -46,16 +46,18 @@ const Header = () => {
               <div className="col-md-6 col-sm-6 text-left">
                 <p>
                   <strong>
-                    <i className="fa fa-phone" style={{color:'#F7C04A'}}/>
+                    <i className="fa fa-phone" style={{ color: '#F7C04A' }} />
                   </strong>{' '}
                   +65 8945 6089 &nbsp;&nbsp;
                   <strong>
-                    <i className="fa fa-envelope" style={{color:'#F7C04A'}}/>
+                    <i className="fa fa-envelope" style={{ color: '#F7C04A' }} />
                   </strong>{' '}
-                  <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                  <a href="mailto:info@yoursite.com">pleducationcentere@yahoo.com</a>
                 </p>
               </div>
-              <div className="col-md-6 col-sm-6 hidden-xs text-right">
+
+              {/* This section will be visible on both desktop and mobile */}
+              <div className="col-md-6 col-sm-6 text-right social-container">
                 <div
                   className="social"
                   style={{
@@ -64,15 +66,6 @@ const Header = () => {
                     justifyContent: 'flex-end',
                   }}
                 >
-                  {/* <a className="facebook" href="#" title="Facebook">
-                    <i className="fab fa-facebook" />
-                  </a>
-                  <a className="instagram" href="#" title="Instagram">
-                    <i className="fab fa-instagram" />
-                  </a>
-                  <a className="tiktok" href="#" title="TikTok">
-                    <i className="fab fa-tiktok" />
-                  </a> */}
                   <Link
                     className="youtube"
                     to="https://youtube.com/@petersplim?si=BOl0c-jtyp27qIEM"
@@ -99,12 +92,11 @@ const Header = () => {
             >
               <div className="logo-normal">
                 <Link className="navbar-brand" to="/" style={{ display: 'flex' }}>
-               <img
+                  <img
                     src={wisePl}
                     alt="WisePl_logo"
-                    style={{  borderRadius: '5px', marginBottom:'450px' }}
+                    style={{ borderRadius: '5px', marginBottom: '450px' }}
                   />
-                  {/* width: '98%', */}
                 </Link>
               </div>
               <button
@@ -145,23 +137,8 @@ const Header = () => {
                     className="dropdown-toggle active"
                     data-toggle="dropdown"
                   >
-                    Programs 
-                    {/* <b className="fa fa-angle-down" /> */}
+                    Programs
                   </Link>
-                  {/* <ul className="dropdown-menu">
-                    <li>
-                      <Link to="#">All Programs</Link>
-                    </li>
-                    <li>
-                      <Link to="#">Maths</Link>
-                    </li>
-                    <li>
-                      <Link to="#">Chemistry</Link>
-                    </li>
-                    <li>
-                      <Link to="#">Physics</Link>
-                    </li>
-                  </ul> */}
                 </li>
                 <li>
                   <Link to="/videos">Videos</Link>
@@ -169,14 +146,35 @@ const Header = () => {
                 <li>
                   <Link to="/contactus">Contact</Link>
                 </li>
-                {/* <li>
-                  <Link to="/admin">Admin</Link>
-                </li> */}
               </ul>
             </div>
           </nav>
         </div>
       </header>
+
+      {/* CSS Media Query for Mobile */}
+      <style>
+        {`
+          @media (max-width: 767px) {
+            .social-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center; /* Center the icons */
+              margin-top: 10px;
+            }
+
+            .social {
+              margin-top: 10px;
+              justify-content: center; /* Center the social links on mobile */
+              align-items: center;
+            }
+
+            .social a {
+              margin-right: 10px; /* Add space between icons */
+            }
+          }
+        `}
+      </style>
     </>
   );
 };

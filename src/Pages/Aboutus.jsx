@@ -90,7 +90,7 @@ const AboutUs = () => {
 
               {/* Introduction Section */}
               <div className="col-md-6" style={{ marginTop: "60px" }}>
-                <h2 className="section-title" style={{ color: "#3F497F", marginBottom: '20px' }}>Welcome to WISE PL</h2>
+                <h2 className="section-title" style={{ color: "#3F497F", marginBottom: '0px' }}>Welcome to WISE PL</h2>
                 <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#333' }}>
                 WISE PL is proudly operated by PL Education Centre, established in 1994 by Mr. Peter SP Lim. We offer a range of educational programs designed to enhance learning and equip students with the tools they need to succeed.Our center is located at Block 121, Bukit Merah Lane 1, #01-12, Singapore 150121, conveniently situated opposite Queensway Shopping Centre and IKEA (Alexandra).
                 </p>

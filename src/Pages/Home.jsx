@@ -21,7 +21,7 @@ const Home = () => {
 
       <section id="home" className="video-section js-height-full">
         {/* Video background */}
-        <video autoPlay muted loop className="video-background">
+        <video autoPlay muted loop playsInline className="video-background">
           <source src={HomePageVideo} type="video/mp4" />
         </video>
 

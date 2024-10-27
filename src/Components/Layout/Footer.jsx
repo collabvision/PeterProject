@@ -152,6 +152,7 @@ export default function Footer() {
           <h3 style={headingStyle}>Contact Us</h3>
           <p>Whatsapp: +65-8945 6089</p>
           <p>Phone: +65-6272 7061</p>
+          <p>Email: pleducationcentere@yahoo.com</p>
           <div style={{marginTop: '1rem'}}>
           <a href="https://wa.me/6589456089" style={socialIconStyle} aria-label="whatsapp">
               <i className="fab fa-whatsapp" />
@@ -162,7 +163,7 @@ export default function Footer() {
             <a href="https://www.instagram.com/petersp.lim/?igsh=MTlveHhuYWt0czg5Yg%3D%3D" style={socialIconStyle} aria-label="Instagram">
               <i className="fab fa-instagram" />
             </a>
-            <a href="#" style={socialIconStyle} aria-label="TikTok">
+            <a href="https://www.tiktok.com/@sgscienceguru?_t=8qc8tHupVfM&_r=1" style={socialIconStyle} aria-label="TikTok">
               <i className="fab fa-tiktok" />
             </a>
             <a href="https://youtube.com/@petersplim?si=BOl0c-jtyp27qIEM" style={socialIconStyle} aria-label="YouTube">
