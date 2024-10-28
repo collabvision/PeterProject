@@ -52,7 +52,7 @@ const Header = () => {
                   <strong>
                     <i className="fa fa-envelope" style={{ color: '#F7C04A' }} />
                   </strong>{' '}
-                  <a href="mailto:info@yoursite.com">pleducationcentere@yahoo.com</a>
+                  <a href="mailto:info@yoursite.com">petersplim705@gmail.com</a>
                 </p>
               </div>
 

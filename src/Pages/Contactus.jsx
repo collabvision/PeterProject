@@ -47,7 +47,7 @@ const Contactus = () => {
                     <h4>Contact us today</h4>
                     <p><a href="tel:+6589456089">+65-8945 6089</a></p>
                     <p><a href="tel:+6562727061">+65-6272 7061</a></p>
-                    <p><a href="mailto:PLEDUCATIONCENTRE@YAHOO.COM">pleducationcentere@yahoo.com</a></p>
+                    <p><a href="mailto:PLEDUCATIONCENTRE@YAHOO.COM">petersplim705@gmail.com</a></p>
                   </div>
                 </div>
 
