@@ -152,7 +152,7 @@ export default function Footer() {
           <h3 style={headingStyle}>Contact Us</h3>
           <p>Whatsapp: +65-8945 6089</p>
           <p>Phone: +65-6272 7061</p>
-          <p>Email: pleducationcentere@yahoo.com</p>
+          <p>Email: petersplim705@gmail.com</p>
           <div style={{marginTop: '1rem'}}>
           <a href="https://wa.me/6589456089" style={socialIconStyle} aria-label="whatsapp">
               <i className="fab fa-whatsapp" />

@@ -210,7 +210,7 @@ Join us to enhance your academic performance and explore the exciting world of s
             <div className="col-md-3">
               <div className="box m30" style={{ backgroundColor: "#FFDC7F" }}>
                 {/* <i className="flaticon-download-business-statistics-symbol-of-a-graphic" /> */}
-                <h4>Matahmatics(A&E)</h4>
+                <h4>Maths(A&E)</h4>
                 <p style={{ color: "#000" }}> The abstract study of numbers,  and relationships, using symbols and logical reasoning to solve problems.</p>
                 {/* <a href="#" className="readmore">Read more</a> */}
               </div>

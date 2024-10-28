@@ -129,7 +129,7 @@ const Header = () => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/aboutus">About Us</Link>
+                  <Link to="/aboutus">Aboutus</Link>
                 </li>
                 <li className="dropdown yamm-fw yamm-half">
                   <Link
