@@ -18,22 +18,24 @@ import '../../Styles/Style.css';
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
 
-  // Function to handle scroll event
   const handleScroll = () => {
     if (window.scrollY > 50) {
-      setIsFixed(true); // Set fixed state when scrolled
+      setIsFixed(true);
     } else {
-      setIsFixed(false); // Remove fixed state when at the top
+      setIsFixed(false);
     }
   };
+
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll); // Cleanup
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -42,7 +44,7 @@ const Header = () => {
       <header className={`header ${isFixed ? 'fixed' : ''}`}>
         <div className="topbar clearfix">
           <div className="container">
-            <div className="row-fluid">
+            <div className="row">
               <div className="col-md-6 col-sm-6 text-left">
                 <p>
                   <strong>
@@ -52,20 +54,12 @@ const Header = () => {
                   <strong>
                     <i className="fa fa-envelope" style={{ color: '#F7C04A' }} />
                   </strong>{' '}
-                  <a href="mailto:info@yoursite.com">petersplim705@gmail.com</a>
+                  <a href="mailto:petersplim705@gmail.com">petersplim705@gmail.com</a>
                 </p>
               </div>
 
-              {/* This section will be visible on both desktop and mobile */}
-              <div className="col-md-6 col-sm-6 text-right social-container">
-                <div
-                  className="social"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'flex-end',
-                  }}
-                >
+              <div className="col-md-6 col-sm-6 text-right">
+                <div className="social-container">
                   <Link
                     className="youtube"
                     to="https://youtube.com/@petersplim?si=BOl0c-jtyp27qIEM"
@@ -74,10 +68,7 @@ const Header = () => {
                     <i className="fab fa-youtube" />
                   </Link>
                   <Link className="avatar" to="/admin" title="Profile">
-                    <i
-                      className="fas fa-user-circle"
-                      style={{ marginLeft: '20px' }}
-                    />
+                    <i className="fas fa-user-circle" style={{ marginLeft: '20px' }} />
                   </Link>
                 </div>
               </div>
@@ -86,10 +77,7 @@ const Header = () => {
         </div>
         <div className="container">
           <nav className="navbar navbar-default yamm">
-            <div
-              className="navbar-header"
-              style={{ display: 'flex', alignItems: 'center' }}
-            >
+            <div className="navbar-header">
               <div className="logo-normal">
                 <Link className="navbar-brand" to="/" style={{ display: 'flex' }}>
                   <img
@@ -102,10 +90,9 @@ const Header = () => {
               <button
                 type="button"
                 className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar"
                 aria-expanded="false"
                 aria-controls="navbar"
+                onClick={toggleNav}
                 style={{ marginLeft: 'auto' }}
               >
                 <span className="sr-only">Toggle navigation</span>
@@ -115,36 +102,32 @@ const Header = () => {
               </button>
             </div>
 
-            <div id="navbar" className="navbar-collapse collapse">
-              <ul
-                className="nav navbar-nav navbar-right"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'flex-end',
-                  flex: 1,
-                }}
-              >
+            <div
+              id="navbar"
+              className={`navbar-collapse collapse ${isNavOpen ? 'open' : ''}`}
+            >
+              <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={() => setIsNavOpen(false)}>Home</Link>
                 </li>
                 <li>
-                  <Link to="/aboutus">Aboutus</Link>
+                  <Link to="/aboutus" onClick={() => setIsNavOpen(false)}>About Us</Link>
                 </li>
                 <li className="dropdown yamm-fw yamm-half">
                   <Link
                     to="/programs"
                     className="dropdown-toggle active"
                     data-toggle="dropdown"
+                    onClick={() => setIsNavOpen(false)}
                   >
                     Programs
                   </Link>
                 </li>
                 <li>
-                  <Link to="/videos">Videos</Link>
+                  <Link to="/videos" onClick={() => setIsNavOpen(false)}>Videos</Link>
                 </li>
                 <li>
-                  <Link to="/contactus">Contact</Link>
+                  <Link to="/contactus" onClick={() => setIsNavOpen(false)}>Contact</Link>
                 </li>
               </ul>
             </div>
@@ -152,25 +135,50 @@ const Header = () => {
         </div>
       </header>
 
-      {/* CSS Media Query for Mobile */}
+      {/* CSS for Social Container and Media Query for Mobile */}
       <style>
         {`
+          .header {
+            background-color: #000;
+            transition: background-color 0.3s;
+          }
+
+          .social-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+          }
+
+          /* Responsive Design for Mobile View */
           @media (max-width: 767px) {
+            .header {
+              background-color: #000; /* Set background color for mobile */
+            }
+
             .social-container {
+              justify-content: center;
+            }
+
+            .social-container a {
+              margin: 0 10px;
+            }
+
+            .navbar-header, .navbar-collapse {
+              width: 100%;
               display: flex;
-              flex-direction: column;
-              align-items: center; /* Center the icons */
-              margin-top: 10px;
+              justify-content: center;
             }
 
-            .social {
-              margin-top: 10px;
-              justify-content: center; /* Center the social links on mobile */
-              align-items: center;
+            .navbar-brand img {
+              width: 100px;
             }
 
-            .social a {
-              margin-right: 10px; /* Add space between icons */
+            .navbar-collapse {
+              display: ${isNavOpen ? 'block' : 'none'}; /* Hide/show based on isNavOpen */
+            }
+
+            .navbar-toggle {
+              display: block;
             }
           }
         `}
